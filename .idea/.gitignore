@@ -1,0 +1,59 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# IntelliJ IDEA specific
+.idea/
+*.iml
+*.iws
+out/
+
+# Build directories
+/build/
+/target/
+/bin/
+/*.class
+
+# Maven
+log/
+*.log
+*.war
+*.ear
+*.db
+*.h2.db
+*.mv.db
+
+# Gradle
+.gradle/
+/build/
+
+# Distribution files
+dist/
+*.jar
+*.zip
+*.tar.gz
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+*.swp
+
+# JetBrains Rider & IntelliJ system
+.idea/
+*.ipr
+*.iws
+.idea_modules/
+
+# VS Code backup if applicable
+.vscode/
+
+# Other common ignores
+*.tmp
+*.bak
+*.orig
+*.rej

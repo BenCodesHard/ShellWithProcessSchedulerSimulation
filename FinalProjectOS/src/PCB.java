@@ -9,8 +9,8 @@ public class PCB {
     public PCB(String name) {
         this.pid = curPID++;
         this.name = name;
-        this.state = PCBState.BLOCKED;
-        this.active = false;
+        this.state = PCBState.READY;
+        this.active = true;
     }
 
     public int getPid() {

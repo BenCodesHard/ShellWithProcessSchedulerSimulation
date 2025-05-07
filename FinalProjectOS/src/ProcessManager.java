@@ -1,6 +1,10 @@
-public class ProcessManager {
-    public void createProcess(String name) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class ProcessManager {
+    private List<PCB> processList = new ArrayList<>();
+    public void createProcess(String name) {
+        PCB process = new PCB(name);
     }
 
     /**

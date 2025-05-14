@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("CLI Shell started. Type 'exit' to quit.");
         while (true) {
-            System.out.print("> ");
+            System.out.print("@w3$0m3_OS> :");
             String input = scanner.nextLine().trim();
             String[] tokens = input.split("\\s+");
 

@@ -3,14 +3,21 @@ import java.util.List;
 
 public class ProcessManager {
     private List<PCB> processList = new ArrayList<>();
+    private MemoryManager memoryManager;
 
+
+    public ProcessManager(MemoryManager memoryManager) {
+        this.memoryManager = memoryManager;
+
+    }
     /**
      * creates a PCB and adds it to the processList
      * @param name
      */
-    public void createProcess(String name) {
+    public PCB createProcess(String name) {
         PCB process = new PCB(name);
         processList.add(process);
+        return process;
 
     }
 
@@ -29,7 +36,8 @@ public class ProcessManager {
                 } catch (InterruptedException e) {
                     System.out.println("Process interrupted");
                 }
-
+                //System.out.println("Process pid = " + process.getPid());
+                memoryManager.free(process.getPid());
                 process.setState(PCBState.READY);
             }
         }
@@ -41,7 +49,7 @@ public class ProcessManager {
      */
     public void listProcesses(){
         for (PCB process : processList) {
-            System.out.println("Process " + process.getPid() + " is in " + process.getState() + " state");
+            System.out.println("PID " + process.getPid() + " [" +process.getName()+"] is in the " + process.getState() + " state");
         }
     }
 }

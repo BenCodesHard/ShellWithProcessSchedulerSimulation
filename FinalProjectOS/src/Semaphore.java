@@ -12,11 +12,11 @@ public class Semaphore {
     public synchronized void waitSem() throws InterruptedException {
         while (value <= 0) {
                 wait();
-
         }
         value--;
     }
 
+    // increments semaphore value and releases hold on resource
     public synchronized void signal() {
         value++;
         notify();

@@ -5,9 +5,14 @@ public class Semaphore {
         this.value = initial;
     }
 
+
+
+    //decrements semaphore value and gives process access to the resource
+    //
     public synchronized void waitSem() throws InterruptedException {
         while (value <= 0) {
-            wait();
+                wait();
+
         }
         value--;
     }
